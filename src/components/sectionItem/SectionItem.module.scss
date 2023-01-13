@@ -1,0 +1,15 @@
+.item {
+    background-color: blue;
+
+    &:hover {
+        background-color: gray;
+    }
+
+    &:active {
+        background-color: red;
+    }
+}
+
+.active {
+    background-color: red;
+}
