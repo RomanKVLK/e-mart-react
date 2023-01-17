@@ -1,15 +1,12 @@
-.item {
-    background-color: blue;
+.section {
+    max-width: 165px;
+    height: 810px;
 
-    &:hover {
-        background-color: gray;
-    }
-
-    &:active {
-        background-color: red;
-    }
+    background-color: #002A32; 
 }
 
-.active {
-    background-color: red;
+.section__logo {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }

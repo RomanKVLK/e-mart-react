@@ -1,12 +1,8 @@
-import React from 'react';
-
 import SectionItem from '../sectionItem';
 import styles from './Sections.module.scss';
 
 const Sections = () => {
-  const [section, setSection] = React.useState();
-
-  const sect = [
+  const sectionName = [
     { name: 'Home', imgPath: '/img/Home.svg' },
     { name: 'Shop', imgPath: '/img/Shop.svg' },
     { name: 'Blog', imgPath: '/img/Blog.svg' },
@@ -15,22 +11,25 @@ const Sections = () => {
     { name: 'Location', imgPath: '/img/Location.svg' },
   ];
 
-  const onChangeSection = (i) => {
-    setSection(i);
+  const onSectionClick = (i) => {
     console.log(i);
   };
 
   return (
-    <div className={styles.item}>
-      {sect.map((value, i) => (
-        <SectionItem
-          onClick={() => onChangeSection(i)}
-          className={section === i ? styles.active : ''}
-          key={i}
-          name={value.name}
-          imgPath={value.imgPath}
-        />
-      ))}
+    <div className={styles.section}>
+      <div className={styles.section__logo}>
+        <img src="/img/GreneryLogo.svg" alt="Logo" />
+      </div>
+      <div className="">
+        {sectionName.map((value, i) => (
+          <SectionItem
+            key={i}
+            name={value.name}
+            imgPath={value.imgPath}
+            onClick={() => onSectionClick(i)}
+          />
+        ))}
+      </div>
     </div>
   );
 };

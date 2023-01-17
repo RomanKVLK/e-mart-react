@@ -1,10 +1,10 @@
 import styles from './SectionItem.module.scss';
 
-const SectionItem = (props) => {
+const SectionItem = ({ imgPath, name }) => {
   return (
-    <div className={styles.item}>
-      <img src={props.imgPath} alt="section" />
-      <h1>{props.name}</h1>
+    <div className={styles.sectionItem}>
+      <img className={styles.sectionItem__icon} src={imgPath} alt="section" width={33} />
+      <p className={styles.sectionItem__name}>{name}</p>
     </div>
   );
 };
